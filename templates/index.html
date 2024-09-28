@@ -1,0 +1,68 @@
+<!-- templates/index.html -->
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Генератор виральных видео</title>
+    <!-- Подключаем стили -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <!-- Подключаем иконки для социальных сетей -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Генератор виральных видео</h1>
+            <p>Создано командой - Розовые единороги</p>
+        </div>
+        <!-- Плавающие элементы для украшения -->
+        <div class="floating-elements">
+            <div class="float float1"></div>
+            <div class="float float2"></div>
+            <div class="float float3"></div>
+            <div class="float float4"></div>
+        </div>
+    </header>
+    <main>
+        <section id="upload" class="upload-section container">
+            <h2>Загрузите ваше видео</h2>
+            <p>Выберите длинное видео, из которого хотите получить короткие клипы</p>
+            <!-- Форма для загрузки файла -->
+            <form id="video-upload-form" enctype="multipart/form-data">
+                <div class="file-upload">
+                    <label for="video-upload" class="btn btn-primary">
+                        <i class="fas fa-upload"></i> Выбрать файл
+                    </label>
+                    <input type="file" id="video-upload" name="video" accept="video/*" style="display: none;">
+                    <span id="file-name">Файл не выбран</span>
+                </div>
+                <!-- Кнопка отправки -->
+                <button type="submit" id="upload-button" class="btn btn-secondary"><i class="fas fa-magic"></i> Сгенерировать клипы</button>
+            </form>
+        </section>
+        <section class="result-section container" style="display: none;">
+            <h2>Ваши сгенерированные клипы</h2>
+            <p>Скачайте отдельные клипы или все сразу</p>
+            <!-- Контейнер для клипов -->
+            <div class="clips-container">
+                <!-- Здесь будут клипы -->
+            </div>
+            <!-- Кнопка для скачивания всех клипов -->
+            <button id="download-all" class="btn btn-primary">
+                <i class="fas fa-download"></i> Скачать все клипы
+            </button>
+        </section>
+    </main>
+    <footer>
+        <div class="container footer-content">
+            <p>Проект выполнен студентами ГБПОУ КС №54. Все права защищены.</p>
+            <div class="social-links">
+                <a href="https://t.me/tima_pelmesh"><i class="fab fa-telegram"></i></a>
+            </div>
+        </div>
+    </footer>
+    <!-- Подключаем скрипты -->
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

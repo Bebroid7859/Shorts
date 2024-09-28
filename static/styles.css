@@ -1,0 +1,303 @@
+/* Обновлённый styles.css */
+
+/* Переменные для удобства изменения цветов */
+:root {
+    --primary-color: #007bff;
+    --text-color: #333;
+    --background-color: #f9f9f9;
+    --footer-background-color: #222;
+    --footer-text-color: #fff;
+}
+
+/* Сброс отступов и полей для всех элементов */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Общий стиль для body */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: #fff;
+}
+
+/* Контейнер для центрирования контента */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Стили для заголовка */
+header {
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 60px 0;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+header p {
+    font-size: 1.5em;
+}
+
+/* Плавающие элементы для украшения */
+.floating-elements {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.float {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.5;
+}
+
+.float1 {
+    width: 80px;
+    height: 80px;
+    background: rgba(255, 255, 255, 0.2);
+    top: 20%;
+    left: 10%;
+    animation: floatAnim 6s infinite;
+}
+
+.float2 {
+    width: 100px;
+    height: 100px;
+    background: rgba(255, 255, 255, 0.2);
+    top: 40%;
+    left: 80%;
+    animation: floatAnim 8s infinite;
+}
+
+.float3 {
+    width: 60px;
+    height: 60px;
+    background: rgba(255, 255, 255, 0.2);
+    top: 60%;
+    left: 30%;
+    animation: floatAnim 5s infinite;
+}
+
+.float4 {
+    width: 120px;
+    height: 120px;
+    background: rgba(255, 255, 255, 0.2);
+    top: 80%;
+    left: 70%;
+    animation: floatAnim 7s infinite;
+}
+
+@keyframes floatAnim {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0); }
+}
+
+/* Стили для секции загрузки */
+.upload-section {
+    padding: 80px 0;
+    text-align: center;
+}
+
+.upload-section h2 {
+    font-size: 2.5em;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.upload-section p {
+    font-size: 1.2em;
+    color: var(--text-color);
+    margin-bottom: 40px;
+}
+
+/* Стили для загрузки файла */
+.file-upload {
+    display: inline-block;
+    position: relative;
+}
+
+.file-upload label.btn {
+    cursor: pointer;
+}
+
+.file-upload input[type="file"] {
+    display: none;
+}
+
+.file-upload #file-name {
+    margin-left: 15px;
+    font-size: 1em;
+    color: var(--text-color);
+}
+
+/* Кнопка "Сгенерировать клипы" */
+#upload-button {
+    margin-top: 30px;
+}
+
+/* Стили для основных кнопок */
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    font-size: 1em;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+    cursor: pointer;
+}
+
+/* Основной цвет кнопки */
+.btn-primary {
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    color: #fff;
+}
+
+/* Второстепенный стиль кнопки */
+.btn-secondary {
+    background-color: #fff;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+}
+
+.btn-secondary:hover {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+/* Стили для секции результата */
+.result-section {
+    padding: 80px 0;
+    background-color: var(--background-color);
+    text-align: center;
+}
+
+.result-section h2 {
+    font-size: 2.5em;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.result-section p {
+    font-size: 1.2em;
+    color: var(--text-color);
+    margin-bottom: 40px;
+}
+
+/* Стили для контейнера клипов */
+.clips-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.clip {
+    width: 300px;
+    background-color: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.clip:hover {
+    transform: translateY(-10px);
+}
+
+.clip video {
+    width: 100%;
+    display: block;
+}
+
+.clip .clip-info {
+    padding: 15px;
+    text-align: center;
+}
+
+.clip .clip-info p {
+    font-size: 1.1em;
+    color: var(--text-color);
+    margin-bottom: 15px;
+}
+
+.clip .clip-info button {
+    font-size: 1em;
+}
+
+/* Стили для кнопки скачивания всех клипов */
+#download-all {
+    margin-top: 20px;
+}
+
+/* Стили для футера */
+footer {
+    background-color: var(--footer-background-color);
+    padding: 40px 0;
+    color: var(--footer-text-color);
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer p {
+    font-size: 1em;
+}
+
+.social-links a {
+    color: var(--footer-text-color);
+    margin-left: 15px;
+    font-size: 1.5em;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: var(--primary-color);
+}
+
+/* Мобильная адаптивность */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.2em;
+    }
+
+    header p {
+        font-size: 1.2em;
+    }
+
+    .upload-section h2,
+    .result-section h2 {
+        font-size: 2em;
+    }
+
+    .clip {
+        width: 100%;
+        max-width: 400px;
+    }
+}

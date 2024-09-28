@@ -1,0 +1,9 @@
+Flask
+flask-cors
+moviepy
+opencv-python
+torch
+numpy
+speechrecognition
+transformers
+
