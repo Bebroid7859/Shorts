@@ -134,7 +134,7 @@ def process_video(video_path):
 
     key_moments = []
     frame_index = 0
-    skip_frames = 10  # Обработка каждого 10-го кадра для ускорения
+    skip_frames = 15  # Обработка каждого 15-го кадра для ускорения, регулируется
 
     last_moment_end = None
     current_moment_start = None
