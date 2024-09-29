@@ -8,7 +8,7 @@
 
 2) Развернуть у себя на ПК:
     1. Распаковать загруженный архив в удобную для вас папку
-    2. скачать файл yolov3.weights и перенести в папку проекта: https://drive.google.com/file/d/1xGpFnh5IObji5ul1pBoGqeaBWGynSvn0/view?usp=sharing
+    2. скачать файл yolov3.weights и перенести в папку проекта: https://pjreddie.com/media/files/yolov3.weights ИЛИ https://drive.google.com/file/d/1xGpFnh5IObji5ul1pBoGqeaBWGynSvn0/view?usp=sharing
     3. Чтобы запустить программу с веб-сайтом, нужно запустить файл app.py
     4. После запустить сайт в браузере: http://127.0.0.1:5000/
     5. Воспользоваться шагами из 1 пункта
